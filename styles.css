@@ -1,0 +1,239 @@
+/* Google Fonts import for a clean, professional look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary: #1a2530;
+  --accent: #2e4a62;
+  --background: #f8f9fa;
+  --text: #222;
+  --link: #1a5a99;
+  --footer-bg: #222;
+  --footer-text: #fff;
+  --nav-bg: #fff;
+  --nav-link: #1a2530;
+  --nav-link-active: #2e4a62;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  background: var(--nav-bg);
+  box-shadow: 0 2px 8px rgba(30,40,60,0.04);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--nav-link);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links li a:hover, .nav-links li a:focus {
+  color: var(--nav-link-active);
+}
+
+/* Dropdown Styles */
+.nav-links li {
+  position: relative;
+}
+.nav-links .dropdown {
+  cursor: pointer;
+}
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(30,40,60,0.08);
+  z-index: 10;
+  border-radius: 0 0 8px 8px;
+  padding: 0.5rem 0;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+}
+.nav-links li:hover .dropdown-content,
+.nav-links li:focus-within .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: var(--nav-link);
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.dropdown-content a:hover, .dropdown-content a:focus {
+  background: var(--background);
+  color: var(--nav-link-active);
+}
+@media (max-width: 700px) {
+  .nav-links .dropdown-content {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  .dropdown-content a {
+    padding-left: 2rem;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: var(--background);
+}
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+.tagline {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+section {
+  margin-bottom: 2.5rem;
+}
+section h2 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.about, .practice-areas, .attorneys-section, .cases-section, .contact-section, .disclaimer-section, .resume-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,40,60,0.04);
+  padding: 2rem 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.7;
+}
+address a {
+  color: var(--link);
+  text-decoration: none;
+}
+address a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1.2rem 1rem 1rem 1rem;
+  font-size: 0.98rem;
+}
+.footer-nav {
+  margin-top: 0.5rem;
+}
+.footer-nav a {
+  color: var(--footer-text);
+  text-decoration: underline;
+  margin: 0 0.3rem;
+  font-size: 0.97rem;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.footer-specialization {
+  font-size: 0.98rem;
+  color: #e8f0e8;
+  margin-top: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    margin-top: 0.7rem;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+  main {
+    padding: 0 0.3rem 2rem 0.3rem;
+  }
+  .about, .practice-areas, .attorneys-section, .cases-section, .contact-section, .disclaimer-section, .resume-section {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+.site-title-bar {
+  width: 100%;
+  background: #5d6c5d;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 1.2rem 0 0.3rem 0;
+  margin: 0;
+}
+
+.site-tagline {
+  width: 100%;
+  text-align: center;
+  color: #e8f0e8;
+  background: #5d6c5d;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.1rem 0 0.5rem 0;
+  margin: 0;
+} 
